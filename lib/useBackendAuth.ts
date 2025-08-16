@@ -11,7 +11,7 @@ export function useBackendAuth() {
   useEffect(() => {
     if (isLoaded && user?.emailAddresses?.[0]?.emailAddress) {
       setLoading(true);
-      fetch("http://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/users/login-or-signup", {
+      fetch("https://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/users/login-or-signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: user.emailAddresses[0].emailAddress, is_primary: true, provider: "GOOGLE" }),

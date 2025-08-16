@@ -119,7 +119,7 @@ export function ChatbotWidget({ backendToken, userEmail }: ChatbotWidgetProps) {
     setChatInput("") // Clear input immediately after sending
     try {
       // No need to get access token or userId for rag-summary
-      const res = await fetch("http://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/email/rag-summary", {
+      const res = await fetch("https://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/email/rag-summary", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

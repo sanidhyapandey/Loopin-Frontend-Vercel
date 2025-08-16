@@ -83,7 +83,7 @@ export function useDashboardData() {
         is_primary: false,
       };
       
-      fetch('http://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/users/connect-email-account', {
+      fetch('https://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/users/connect-email-account', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ export function useDashboardData() {
   useEffect(() => {
     if (backendToken) {
       setLoading(true);
-      fetch('http://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/email/rag/unified-summary', {
+      fetch('https://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/email/rag/unified-summary', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ export function useDashboardData() {
         connectedEmail
       ) {
         try {
-          await fetch('http://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/users/connect-email-account', {
+          await fetch('https://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/users/connect-email-account', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ export function useDashboardData() {
       : null;
 
     if (outlook_access_token && outlook_connected_email && backendToken) {
-      fetch('http://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/users/connect-email-account', {
+      fetch('https://loopin-backend-dev-env.eba-9w2ppy6p.eu-north-1.elasticbeanstalk.com/users/connect-email-account', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
